@@ -1,0 +1,22 @@
+{
+  "name": "qa-automation-challenge",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Playwright + TypeScript automation framework using BDD and POM for the QA technical challenge",
+  "scripts": {
+    "bddgen": "bddgen",
+    "test": "npm run bddgen && playwright test",
+    "test:ui": "npm run bddgen && playwright test --project=bdd-chromium",
+    "test:api": "playwright test --project=api",
+    "test:non-functional": "playwright test --project=non-functional",
+    "test:headed": "npm run bddgen && playwright test --project=bdd-chromium --headed",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^13.0.0",
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.3.0",
+    "playwright-bdd": "^9.0.0",
+    "typescript": "^6.0.3"
+  }
+}

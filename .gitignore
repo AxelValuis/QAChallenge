@@ -1,0 +1,12 @@
+back/node_modules/
+front/node_modules/
+qaAutomationChallenge/node_modules/
+qaAutomationChallenge/playwright-report/
+qaAutomationChallenge/test-results/
+qaAutomationChallenge/.features-gen/
+__pycache__/
+docx_render_check/
+~$*.docx
+*.md
+qa-challenge-retoaxel-v2.docx
+qa-challenge-retoaxel-v3.docx
