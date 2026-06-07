@@ -4,18 +4,18 @@ import { test } from '../fixtures/test-fixtures';
 
 const { Given, When, Then } = createBdd(test);
 
-Given('the user opens the registration page', async ({ registerPage }) => {
+Given('que el usuario abre la página de registro', async ({ registerPage }) => {
   await registerPage.open();
 });
 
 When(
-  'the user registers with email {string} and password {string}',
+  'el usuario se registra con email {string} y password {string}',
   async ({ registerPage }, email: string, password: string) => {
     await registerPage.register(email, password);
   }
 );
 
-Then('the registration form should be visible', async ({ registerPage }) => {
+Then('el formulario de registro debe ser visible', async ({ registerPage }) => {
   await expect(registerPage.emailField()).toBeVisible();
   await expect(registerPage.passwordField()).toBeVisible();
   await expect(registerPage.actionButton()).toBeVisible();
@@ -23,7 +23,7 @@ Then('the registration form should be visible', async ({ registerPage }) => {
 });
 
 Then(
-  'the register response message should be {string}',
+  'el mensaje de respuesta del registro debe ser {string}',
   async ({ registerPage }, expectedMessage: string) => {
     await expect(registerPage.message()).toHaveText(expectedMessage);
   }

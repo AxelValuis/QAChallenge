@@ -85,6 +85,7 @@ npm run report
 ## Notas de diseno
 
 - La suite `UI` usa `BDD + Gherkin` para expresar escenarios de negocio.
+- Los archivos `.feature` fueron redactados en espanol para alinearse con el idioma de la consigna y del dominio funcional.
 - La capa `pages/` implementa `POM` para mejorar mantenibilidad.
 - La suite `API` valida reglas criticas de `register` y `login`.
 - Algunos escenarios reflejan defectos conocidos del sistema para evidenciar incumplimientos respecto a la historia de usuario.

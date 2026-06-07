@@ -4,18 +4,18 @@ import { test } from '../fixtures/test-fixtures';
 
 const { Given, When, Then } = createBdd(test);
 
-Given('the user opens the login page', async ({ loginPage }) => {
+Given('que el usuario abre la página de login', async ({ loginPage }) => {
   await loginPage.open();
 });
 
 When(
-  'the user logs in with email {string} and password {string}',
+  'el usuario inicia sesión con email {string} y password {string}',
   async ({ loginPage }, email: string, password: string) => {
     await loginPage.login(email, password);
   }
 );
 
-Then('the login form should be visible', async ({ loginPage }) => {
+Then('el formulario de login debe ser visible', async ({ loginPage }) => {
   await expect(loginPage.emailField()).toBeVisible();
   await expect(loginPage.passwordField()).toBeVisible();
   await expect(loginPage.actionButton()).toBeVisible();
@@ -23,7 +23,7 @@ Then('the login form should be visible', async ({ loginPage }) => {
 });
 
 Then(
-  'the login response message should be {string}',
+  'el mensaje de respuesta del login debe ser {string}',
   async ({ loginPage }, expectedMessage: string) => {
     await expect(loginPage.message()).toHaveText(expectedMessage);
   }

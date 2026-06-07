@@ -4,7 +4,7 @@ Repositorio de entrega del reto tecnico para la posicion de `QA Engineer`.
 
 ## Entregables incluidos
 
-- Documento final: `qa-challenge-retoaxel.docx`
+- Documento final: `qa-challenge-retoAxelValuis.docx`
 - Proyecto de automatizacion: `qaAutomationChallenge/`
 
 ## Repositorio
@@ -20,6 +20,7 @@ La solucion cubre:
 - identificacion de bugs y mejoras
 - propuesta de certificacion QA
 - automatizacion con `Playwright + TypeScript + BDD + POM`
+- escenarios BDD redactados en espanol para alinearse con la consigna
 - respuesta a los retos conceptuales de ambientes, priorizacion y agile testing
 
 ## Estructura principal
@@ -28,7 +29,7 @@ La solucion cubre:
 back/
 front/
 qaAutomationChallenge/
-qa-challenge-retoaxel.docx
+qa-challenge-retoAxelValuis.docx
 ```
 
 ## Ejecucion del sistema base

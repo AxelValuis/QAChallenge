@@ -1,36 +1,38 @@
-@ui @functional @regression @risk-high
-Feature: User login
-  As a registered user
-  I want to access the application
-  So that I can use protected functionality
+# language: es
 
-  Background:
-    Given the user opens the login page
+@ui @functional @regression @risk-high
+Característica: Inicio de sesión de usuario
+  Como usuario registrado
+  Quiero acceder a la aplicación
+  Para poder usar funcionalidades protegidas
+
+  Antecedentes:
+    Dado que el usuario abre la página de login
 
   @smoke
-  Scenario: Display the login form
-    Then the login form should be visible
+  Escenario: Visualizar el formulario de login
+    Entonces el formulario de login debe ser visible
 
   @positive
-  Scenario: Login with valid credentials
-    When the user logs in with email "ok@test.com" and password "123456"
-    Then the login response message should be "LOGIN VALID"
+  Escenario: Iniciar sesión con credenciales válidas
+    Cuando el usuario inicia sesión con email "ok@test.com" y password "123456"
+    Entonces el mensaje de respuesta del login debe ser "LOGIN VALID"
 
   @negative @fail @data-driven
-  Scenario Outline: Reject invalid login data
-    When the user logs in with email "<email>" and password "<password>"
-    Then the login response message should be "<message>"
+  Esquema del escenario: Rechazar datos inválidos de login
+    Cuando el usuario inicia sesión con email "<email>" y password "<password>"
+    Entonces el mensaje de respuesta del login debe ser "<message>"
 
-    Examples:
-      | email   | password | message |
-      | invalid | 123456   | INVALID |
-      | ok@test.com | 123   | INVALID |
+    Ejemplos:
+      | email       | password | message |
+      | invalid     | 123456   | INVALID |
+      | ok@test.com | 123      | INVALID |
 
   @negative @data-driven
-  Scenario Outline: Validate required login fields
-    When the user logs in with email "<email>" and password "<password>"
-    Then the login response message should be "<message>"
+  Esquema del escenario: Validar campos requeridos en login
+    Cuando el usuario inicia sesión con email "<email>" y password "<password>"
+    Entonces el mensaje de respuesta del login debe ser "<message>"
 
-    Examples:
+    Ejemplos:
       | email | password | message  |
       |       |          | REQUIRED |
