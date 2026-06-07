@@ -3,8 +3,6 @@ import { authUsers, expectedMessages } from '../../src/data/auth-test-data';
 
 test.describe('Login API - Risk-based regression', () => {
   test('API-LOG-01 should reject invalid login credentials', async ({ request, baseURL }) => {
-    test.fail(true, 'Known defect: login currently accepts invalid credentials.');
-
     const response = await request.post(`${baseURL}/login`, {
       data: authUsers.shortPasswordUser
     });

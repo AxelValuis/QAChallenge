@@ -18,7 +18,7 @@ Característica: Inicio de sesión de usuario
     Cuando el usuario inicia sesión con email "ok@test.com" y password "123456"
     Entonces el mensaje de respuesta del login debe ser "LOGIN VALID"
 
-  @negative @fail @data-driven
+  @negative @data-driven
   Esquema del escenario: Rechazar datos inválidos de login
     Cuando el usuario inicia sesión con email "<email>" y password "<password>"
     Entonces el mensaje de respuesta del login debe ser "<message>"

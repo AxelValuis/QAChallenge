@@ -88,4 +88,5 @@ npm run report
 - Los archivos `.feature` fueron redactados en espanol para alinearse con el idioma de la consigna y del dominio funcional.
 - La capa `pages/` implementa `POM` para mejorar mantenibilidad.
 - La suite `API` valida reglas criticas de `register` y `login`.
-- Algunos escenarios reflejan defectos conocidos del sistema para evidenciar incumplimientos respecto a la historia de usuario.
+- Los escenarios automatizados se escribieron segun el criterio de aceptacion esperado; cuando la aplicacion incumple, la ejecucion falla y deja evidencia directa del defecto.
+- En el estado actual del sistema, algunos casos de `UI` y `API` fallan a proposito porque revelan bugs reales frente a los criterios de aceptacion.

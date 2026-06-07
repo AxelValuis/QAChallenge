@@ -13,8 +13,6 @@ test.describe('Register API - Risk-based regression', () => {
   });
 
   test('API-REG-02 should accept a password with exactly 5 characters', async ({ request, baseURL }) => {
-    test.fail(true, 'Known defect: the current implementation rejects passwords with exactly 5 characters.');
-
     const response = await request.post(`${baseURL}/register`, {
       data: authUsers.boundaryUser
     });

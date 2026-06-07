@@ -18,7 +18,7 @@ Característica: Registro de usuario
     Cuando el usuario se registra con email "ok@test.com" y password "123456"
     Entonces el mensaje de respuesta del registro debe ser "SAVED"
 
-  @negative @fail
+  @negative
   Escenario: Aceptar password de exactamente 5 caracteres
     Cuando el usuario se registra con email "ok@test.com" y password "12345"
     Entonces el mensaje de respuesta del registro debe ser "SAVED"
